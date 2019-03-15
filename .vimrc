@@ -1,7 +1,17 @@
-let g:spotify_token='OWJjZjc5ZDA1NGYxNDQ0MGFhNzU4ZThlZDhjODc3YmI6ZTM5ZDYzNDUxZmZlNGExNDlmMjQ4NGJmNzk2Nzc5NzM='
-" execute pathogen#infect()
+execute pathogen#infect()
 
-syntax on
+nnoremap <C-e> :NERDTreeToggle<CR>      " Ctrl+e to toggle NERDTree window
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" syntax on
 
 colorscheme molokai_dark
 
